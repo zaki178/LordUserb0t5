@@ -1,6 +1,6 @@
 {
   "name": "LordUserbot",
-  "version": "3.2.1",
+  "version": "4.5.0",
   "description": "WhatsApp bot",
   "main": "main.js",
   "directories": {
