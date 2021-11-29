@@ -1574,8 +1574,9 @@ _Tunggu Proses Upload Media_`
 									sendFileFromUrl(res[0].link, document, {mimetype: res[0].mime, filename: res[0].nama, quoted: Ofc})
 									break
 						case 'tiktoknowm':   case 'tiktok':
+if (!q) return reply('Linknya?')
+									
 									if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply('Invalid link')
-									if (!q) return reply('Linknya?')
 									let nowem = q
 									hx.ttdownloader(nowem)
 									.then(result => {
@@ -1587,9 +1588,10 @@ _Tunggu Proses Upload Media_`
 											})
 										}).catch((err) => reply(`Link tidak valid`))
 									break 
-						case 'tiktokmusic': case 'tiktokaudio':  
+						case 'tiktokmusic': case 'tiktokaudio': 
+if (!q) return reply('Linknya?')
+									 
 									if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply('Invalid Link')
-									if (!q) return reply('Linknya?')
 									let audi = q
 									hx.ttdownloader(audi)
 									.then(result => {
