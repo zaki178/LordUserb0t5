@@ -1582,9 +1582,10 @@ if (!q) return reply('Linknya?')
 									.then(result => {
 										const { wm, nowm, audio } = result
 										axios.get(`https://tinyurl.com/api-create.php?url=${nowm}`)
-										.then(async (a) => {
+										.then(async (a) => { 
+                                                                                        let ksown = await getBuffer(nowm)
 											me = `*Link* : ${a.data}`
-											Zeeone.sendMessage(from,{url:`${nowm}`},video,{mimetype:'video/mp4',quoted: Ofc, caption:me})
+											Zeeone.sendMessage(from,ksown,video,{mimetype:'video/mp4',quoted: Ofc, caption:me})
 											})
 										}).catch((err) => reply(`Link tidak valid`))
 									break 
@@ -1598,7 +1599,8 @@ if (!q) return reply('Linknya?')
 										const { wm, nowm, audio } = result
 										axios.get(`https://tinyurl.com/api-create.php?url=${audio}`)
 										.then(async (a) => {
-											Zeeone.sendMessage(from,{url:`${audio}`},MessageType.audio,{mimetype:'audio/mp4',quoted: Ofc})
+                                                                                         let ksjsnjw = await getBuffer(audio)
+											Zeeone.sendMessage(from,ksjsnjw,MessageType.audio,{mimetype:'audio/mp4',quoted: Ofc})
 											})
 										}).catch((err) => reply(`Link tidak valid`))
 									break
@@ -1730,7 +1732,7 @@ if (!q) return reply('Linknya?')
 									break
 						case 'waifu': case 'shinobu': case 'megumin': case 'bully': case 'cuddle': case 'cry': case 'hug': case 'awoo': case 'kiss': case 'lick': case 'pat': case 'smug': case 'bonk': case 'yeet': case 'blush': case 'smile': case 'wave': case 'highfive': case 'handhold': case 'nom': case 'bite': case 'glomp': case 'slap': case 'kill': case 'happy': case 'wink': case 'poke': case 'dance': case 'cringe': 
               reply(mess.wait)
-              let waifu = await fetchJson(`https://api.waifu.pics/sfw/${command.split(prefix)[1]}`)
+              let waifu = await fetchJson(`https://api.waifu.pics/sfw/${command}`)
                 await sendFileFromUrl(from,waifu.url,`${command}`,Ofc)
                 .catch((err) => {
                     reply('Terjadi kesalahan')
