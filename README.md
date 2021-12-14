@@ -26,12 +26,26 @@
 
 [`Click Here`](https://github.com/zeeoneofc/LordUserb0t3/blob/master/session.json#L1)
 
-## `SETTING`
+## `SETTING.JSON`
 
-- Owner number [Here](https://github.com/zeeoneofc/LordUserb0t3/blob/master/settings.json#L1)
-- Owner name [Here](https://github.com/zeeoneofc/LordUserb0t3/blob/master/settings.json#L1)
-- Botname [Here](https://github.com/zeeoneofc/LordUserb0t3/blob/master/settings.json#L1)
-
+```ts
+{
+    "self_mode": false,
+    "anti_delete": false,
+    "anti_call": true,
+    "autorespon": true,
+    "user_register": true,
+    "auto_welcome": true,
+    "auto_leave": true,
+	"prefix": ".",
+	"ownerNumber": "62887435047326",
+	"ownername": "ZeeoneOfc",
+	"botname":"LordUserbot",
+	"thumbnail":"LordUserbot_Thumb_1.jpg",
+	"fakethumb":"LordUserbot_Thumb_1.jpg",
+	"url_gif":"https://telegra.ph/file/c864fc477fa22e0d4bfc3.mp4"
+}
+```
 ## `CHANGE DYNO`
 
 Off in web nya
